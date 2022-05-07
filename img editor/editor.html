@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title></title>
+
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+ 
+	<body>
+		<div id="brushes">
+			<button onclick="now_mode = 1;">
+				<img src="brushes/brush1.png">
+			</button>
+
+			<button onclick="now_mode = 2;">
+				<img src="brushes/brush2.png">
+			</button>
+
+			<button onclick="now_mode = 3;">
+				<img src="brushes/clear.png">
+			</button>
+
+			<button onclick="now_mode = 4;">
+				<img src="brushes/brush3.png">
+			</button>
+		</div>
+
+		<div id="menu">
+			<div class="move_card">
+				<div>
+					<input type="color" oninput="change_color(this)" style="display: block;">
+					
+					<h5>Размер кисти:</h5>
+					<input class="inp_range" type="range" oninput="range_text(this, 'range_text')" value="10">
+					<p class="range_text">10</p>
+
+					<button id="brushes_view" onclick="visible_brushes()">Кисти</button>
+				</div>
+
+				<h1>.</h1>
+			</div>
+
+			
+
+			<button class="visib" onclick="visible_menu();">></button>
+		</div>
+
+		<div class="create_img">
+			<canvas id="paint" onmousemove="custom_cursor()"></canvas>
+			
+			
+			<button onclick="save_img()" class="show_res">Показать результат</button>
+			<button onclick="clear_img()">Очистить</button>
+			<img id="result">
+		</div>
+		
+		
+	</body>
+
+
+	<script src="editing.js"></script>
+	<script src="main.js"></script>
+	<script src="move elem.js"></script>
+</html>
