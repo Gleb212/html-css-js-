@@ -1,0 +1,54 @@
+body > *
+{
+	display: none;
+}
+
+button
+{
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+
+	margin-top: 10px;
+}
+
+nav
+{
+	margin-top: 20px;
+	text-align: center;
+}
+
+div
+{
+    display: inline-block;
+}
+
+body
+{
+    margin-left: 0px;
+}
+
+.myframe
+{
+
+	border-radius: 20px;
+	border: solid 2px rgb(165, 165, 197);
+
+	background-color: lavender;
+
+	margin-left: 20px;
+
+	height: 210px;
+}
+
+.rand_gradient
+{
+	border-radius: 100%;
+	border: solid 2px rgba(52, 255, 153, 0.596);
+
+	height: 150px;
+	width: 150px;
+
+	
+	/* background-image: linear-gradient(to right, red 20%, blue 100%);; */
+}

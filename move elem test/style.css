@@ -1,0 +1,13 @@
+#move_elem
+{
+    border-radius: 5px;
+    background: rgba(192, 192, 192, 0.541);
+
+    display: inline-block;
+    position: absolute;
+}
+
+button
+{
+    border-radius:60px;
+}

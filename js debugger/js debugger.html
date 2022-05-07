@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>js debugger</title>
+
+		<script src="start js.js"></script>
+		<script src="edit console.js"></script>
+
+		<style>
+
+			textarea
+			{
+				color: rgb(5, 153, 5);
+				background-color: black;
+				margin-left: 22%; 
+
+				max-width: 800px;
+				max-height: 500px;
+
+				width: 800px;
+				height: 500px;
+			}
+
+			.bt_pos
+			{
+				margin-left: 76.8%;
+			}
+
+			h3
+			{
+				font-size: 26px;
+				margin-left: 45%;
+			}
+
+			.choose_color
+			{
+				margin-left: 42%;
+			}
+
+			.colors
+			{
+				margin-left: 30%;
+			}
+
+			.red
+			{
+				height: 50px;
+				width: 50px;
+				background-color: red;
+			}
+
+			.purple
+			{
+				height: 50px;
+				width: 50px;
+				background-color: purple;
+			}
+
+			.yellow
+			{
+				height: 50px;
+				width: 50px;
+				background-color: yellow;
+			}
+
+			.green
+			{
+				height: 50px;
+				width: 50px;
+				background-color: green;
+			}
+
+			.blue
+			{
+				height: 50px;
+				width: 50px;
+				background-color: blue;
+			}
+
+			.gray
+			{
+				height: 50px;
+				width: 50px;
+				background-color: gray;
+			}
+
+			.orange
+			{
+				height: 50px;
+				width: 50px;
+				background-color: orange;
+			}
+
+			.pink
+			{
+				height: 50px;
+				width: 50px;
+				background-color: pink;
+			}
+
+			.brown
+			{
+				height: 50px;
+				width: 50px;
+				background-color: brown;
+			}
+
+			.black
+			{
+				height: 50px;
+				width: 50px;
+				background-color: black;
+			}
+
+			.white
+			{
+				height: 50px;
+				width: 50px;
+				background-color: white;
+			}
+
+		</style>
+	</head>
+ 
+	<body>
+		<script>
+			function t(file)
+			{
+				alert(file);
+			}
+		</script>
+		
+		<textarea id="code"></textarea>
+		
+
+		<div class="bt_pos">
+			<button onclick="start_code()" id="start_bt">Запустить</button>
+		</div>
+		
+		<br>
+		<br>
+		
+		<h3>Цвета консоли</h3>
+
+		<br>
+
+		<div class="choose_color">
+			<button onclick="console()">Задний фон консоли</button>
+			<button onclick="font()">Шрифт консоли</button>
+		</div>
+		
+		<br>
+
+		<div class="colors">
+			<button class="black" onclick="edit_color('black')"></button>
+			<button class="white" onclick="edit_color('white')"></button>
+
+			<button class="red" onclick="edit_color('red')"></button>
+			<button class="purple" onclick="edit_color('purple')"></button>
+
+			<button class="yellow" onclick="edit_color('yellow')"></button>
+			<button class="green" onclick="edit_color('green')"></button>
+
+			<button class="blue" onclick="edit_color('blue')"></button>
+			<button class="gray" onclick="edit_color('gray')"></button>
+
+			<button class="orange" onclick="edit_color('orange')"></button>
+			<button class="pink" onclick="edit_color('pink')"></button>
+
+			<button class="brown" onclick="edit_color('brown')"></button>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title></title>
+
+		<link rel="stylesheet" href="style.css">
+	</head>
+ 
+	<body onload="repeat_elem(); grid_colors(); load_elems()">
+		<nav class="list">
+			<div class="myframe">
+				<div class="rand_gradient"></div>
+
+				<button>Копировать!</button>
+			</div>
+
+			<div class="myframe">
+				<div class="rand_gradient"></div>
+
+				<button>Копировать!</button>
+			</div>
+
+			<div class="myframe">
+				<div class="rand_gradient"></div>
+
+				<button>Копировать!</button>
+			</div>
+
+			<div class="myframe">
+				<div class="rand_gradient"></div>
+
+				<button>Копировать!</button>
+			</div>
+
+			<div class="myframe">
+				<div class="rand_gradient"></div>
+
+				<button>Копировать!</button>
+			</div>
+
+			<div class="myframe">
+				<div class="rand_gradient"></div>
+
+				<button>Копировать!</button>
+			</div>
+
+			<div class="myframe">
+				<div class="rand_gradient"></div>
+
+				<button>Копировать!</button>
+			</div>
+		</nav>
+	</body>
+
+	<script src="randomize.js"></script>
+	<script src="optimizers.js"></script>
+
+	<script>
+		function repeat_elem()
+		{
+			for(let i=0; i<9; i++)
+			{
+				document.querySelector('body').appendChild(document.getElementsByClassName('list')[0].cloneNode(true));
+			}
+		}
+
+		function set_event()
+		{
+			for(let s of document.getElementsByTagName('button'))
+			{
+				s.onclick = function(event)
+				{
+					let bg = s.parentElement.getElementsByTagName('div')[0].style.backgroundImage;
+
+					if(bg == "")
+					{
+						alert('Градиент не прогрузился!');
+						return;
+					}
+
+					navigator.clipboard.writeText("background-image: " + bg + ";");
+				};
+			}
+		}
+
+		setTimeout(set_event, 5000);
+	</script>
+</html>

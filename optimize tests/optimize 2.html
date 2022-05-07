@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title></title>
+
+		<style>
+			body > *
+			{
+				display: none;
+			}
+		</style>
+	</head>
+ 
+	<body onload="load_elems()">
+		<button id="a">
+			asdfassadf
+		</button>
+
+		<h2>asd</h2>
+	</body>
+
+<script>
+	var elems = document.body.childNodes;
+	var tmp = 0;
+
+	function load_elems()
+	{
+		try
+		{
+			if(elems[tmp] != "[object HTMLScriptElement]")
+			{
+				elems[tmp].style.display = "block";
+			}
+		}
+		catch{}
+
+		tmp += 1;
+
+		if(elems.length > tmp)
+		{
+			setTimeout(load_elems, 200);
+		}
+		else
+		{
+			return;
+		}
+	}
+</script>
+</html>

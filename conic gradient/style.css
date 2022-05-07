@@ -1,0 +1,88 @@
+.card, .card > *
+{
+    width: 200px;
+    height: 200px;
+}
+
+.card
+{
+    border: solid 5px silver;
+    background: rgb(219, 219, 219);
+}
+
+.card > *
+{
+    border-radius: 100%;
+    background: conic-gradient(red, orange, yellow, green, blue);
+}
+
+body > *
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes conic_rotate
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.card_2::before
+{
+    content: "";
+    position: absolute;
+
+    width: 150px;
+    height: 250px;
+
+    margin-top:-15px;
+
+    background-image: conic-gradient(transparent, transparent, blue, transparent, transparent, transparent, red);
+
+    animation: conic_rotate 3s infinite linear;
+}
+
+
+
+.card_2
+{
+    width: 150px;
+    height: 220px;
+
+    position:relative;
+
+    overflow: hidden;
+
+    border: solid 2px rgb(19, 19, 34);
+    border-radius: 20px;
+}
+
+.card_2::after
+{
+    content: "";
+    position: absolute;
+    
+    inset: 2px;
+
+    background: rgb(19, 19, 34);
+    border-radius: 15px;
+}
+
+.card_2 > *
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    z-index: 50;
+
+    -webkit-text-stroke: white 1px;
+}

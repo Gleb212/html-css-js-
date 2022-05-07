@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title></title>
+
+		<style>
+			/*div
+			{
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: -50px;
+
+				display: block;
+
+				width: 300px;
+				height: 200px;
+
+				background-color: gray;
+			}*/
+
+			p
+			{
+				margin-bottom: 100%;
+			}
+
+			button
+			{
+				height: 40px;
+			}
+
+		</style>
+	</head>
+ 
+	<body onscroll="optimize()">
+
+		<button id="t" class="t1">ads</button>
+		<p>asdf</p>
+
+		<script>
+			function optimize()
+			{
+				for(let i of document.querySelector('body').children)
+				{
+					if(pageYOffset > i.clientHeight+84 & i.nodeName != "SCRIPT")
+					{
+						i.style.visibility = "hidden";
+					}
+					else
+					{
+						i.style.visibility = "visible";
+					}
+				}
+			}
+
+			
+		</script>
+	</body>
+</html>
